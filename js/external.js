@@ -13,9 +13,9 @@ let daysYouRentedLittleMermaid = prompt('How many days did you rent The Little M
 let daysYouRentedBrotherBear = prompt('How many days did you rent Brother Bear?');
 let daysYouRentedHercules = prompt('How many days did you rent Hercules?');
 //turning prompt strings in numbers
-daysYouRentedLittleMermaid = parseInt(daysYouRentedLittleMermaid);
-daysYouRentedBrotherBear = parseInt(daysYouRentedBrotherBear);
-daysYouRentedHercules = parseInt(daysYouRentedHercules);
+// daysYouRentedLittleMermaid = parseInt(daysYouRentedLittleMermaid);
+// daysYouRentedBrotherBear = parseInt(daysYouRentedBrotherBear);
+// daysYouRentedHercules = parseInt(daysYouRentedHercules);
 
 let movieRentalPrice = 3;
 
