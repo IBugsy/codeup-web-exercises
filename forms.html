@@ -1,0 +1,121 @@
+<!--Create a file named forms.html.
+
+Using what you have learned in the previous lessons, add the necessary HTML document structure to the page with a title of: "Register With Us".
+
+Create an empty form element. We will be adding to this throughout the exercise.
+
+Below is an example of using the Request Inspector.
+
+<form method="POST" action="https://request-inspector.glitch.me/">
+Create text fields for email and password with appropriate placeholder values.
+
+Create a textarea named "bio". This is for the user to fill out a short description of themselves.
+
+Create a "How did you hear about us" section that contains radio buttons.
+The values should be "billboard", "radio advertisement", "internet advertisement", and "other".
+Only one of the values should be allowed to be selected at a time.
+
+What happens if the inputs are given different name attributes?
+Change these inputs so that multiple answers are allowed to be selected.
+Create a dropdown that asks the user what web browser they are using.
+
+As you work through the steps above, you should:
+
+Make sure all of your form elements have labels.
+Make sure there's a way to submit the form, adding a submit button will solve this.
+Ensure that all of your form values are being submitted to the Request Inspector.
+Experiment with different attribute values:
+What do you notice when changing the form's request method from GET to POST?
+What happens if you leave off the name attribute on an input?
+What happens if you leave off the id attribute on a form input?
+Finally, commit the changes to your git repository, and push to GitHub.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register With Us</title>
+    <style>
+        /* Add CSS styles for alignment */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 15%;
+            padding: 8px;
+            margin-bottom: 2px;
+            box-sizing: border-box;
+        }
+
+        /* Style for radio buttons */
+        .radio-container {
+            display: flex;
+            align-items: center;
+            align-content: flex-end;
+            -ms-grid-column-align: start;
+        }
+
+        .radio-label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Register With Us</h1>
+<form method="POST" action="https://request-inspector.glitch.me/">
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <label for="bio"></label>
+    <textarea id="bio" name="bio" placeholder="Tell us about yourself"></textarea>
+    <br>
+    <hr>
+    <label><h2>How did you hear about us?</h2></label>
+
+    <fieldset><!-- Radio buttons with improved alignment -->
+        <div class="checkbox-container">
+            <label class="checkbox-label">Billboard</label>
+            <input type="checkbox" name="quiz_question_1[]" value="billboard">
+        </div>
+
+        <div class="checkbox-container">
+            <label class="checkbox-label">Radio Advertisement</label>
+            <input type="checkbox" name="quiz_question_1[]" value="radio advertisement">
+        </div>
+
+        <div class="checkbox-container">
+            <label class="checkbox-label">Internet Advertisement</label>
+            <input type="checkbox" name="quiz_question_1[]" value="internet advertisement">
+        </div>
+
+        <div class="checkbox-container">
+            <label class="checkbox-label">Other</label>
+            <input type="checkbox" name="quiz_question_1[]" value="other">
+        </div>
+    </fieldset>
+
+    <label for="browser">Which Web Browser Do You Use?</label>
+    <select id="browser" name="browser" multiple>
+        <option value="chrome">Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="safari">Safari</option>
+        <option value="edge">Microsoft Edge</option>
+    </select><br>
+    <input type="submit"
+</form>
+
+</body>
+
+</html>
