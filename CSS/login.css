@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #cbffcd;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+form {
+    margin: 1em 0; /* Separation from other elements by 1em */
+}
+
+fieldset {
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    margin: 1em; /* Separation from content and border */
+    padding: 1em; /* Separation from content and border */
+    border: none; /* No border */
+    background-color: white; /* White background */
+}
+
+.width-80 {
+    width: 80%; /* 80% width */
+    margin: auto; /* Centered with margin auto */
+}
+
+.form-group {
+    width: 100%; /* 100% width */
+    margin: 0.5em 0; /* Separation from elements on top and below */
+}
+
+.form-label {
+    font-weight: bold; /* Bold text */
+}
+
+.btn-block {
+    width: 100%; /* 100% width */
+}
+
+.btn {
+    padding: 8px; /* Separation of 8px between text and border */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+    border: 1px solid lightgrey; /* 1px border with light grey color */
+    background-color: #0fb784;
+}
+
+.form-control {
+    margin: 0.5em 0; /* Separation from elements on top and below */
+    padding: 4px 0; /* 4px on top and below the text */
+    width: calc(100% - 16px); /* Using calc to match the width of the button */
+}
