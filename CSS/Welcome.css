@@ -19,4 +19,49 @@
 }
 .fancy-header {
     color: purple;
+    text-align: center;
+    text-decoration: underline;
+}
+body {
+    background-color: lightblue;
+}
+body {
+    background-image: url('Images/beach sunset.png');
+    height: 756px;
+    width: 1146px;
+}
+
+ul, ol {
+    list-style: square;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    font-size: 14px;
+}
+
+a {
+    color: #990000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #660066;
+}
+
+a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff0000;
 }
