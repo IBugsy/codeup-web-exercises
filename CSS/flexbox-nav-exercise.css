@@ -1,0 +1,42 @@
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Box sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Google Fonts for logo and link text */
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    padding: 0.2em 0;
+}
+
+nav {
+    display: flex;
+}
+
+/* Style anchor tags */
+a {
+    display: inline-block;
+    color: inherit;
+    padding: 10px;
+}
+
+/* Blue color on hover for links */
+a:hover {
+    color: blue;
+}
+
+/* Center the logo horizontally */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
