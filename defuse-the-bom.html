@@ -36,7 +36,6 @@
         "use strict";
 
         var detonationTimer = 5;
-        var timerInterval;
 
         function updateTimer() {
             if (detonationTimer === 0) {
@@ -60,7 +59,7 @@
             alert('BOM defused!');
         }
 
-        timerInterval = setInterval(updateTimer, 1000);
+        let timerInterval = setInterval(updateTimer, 1000);
 
         var defuser = document.getElementById('defuser');
         defuser.addEventListener('click', defuseTheBOM);
