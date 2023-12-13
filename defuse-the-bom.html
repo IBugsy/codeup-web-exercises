@@ -3,11 +3,33 @@
 <head>
     <meta charset="utf-8">
     <title>Defuse the BOM</title>
+    <style>
+        /* Define styles for the button in different states */
+        .bomb-button {
+            width: 100px;
+            height: 50px;
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+        }
+
+        #defuser {
+            background-image: url('bomb.png'); /* Set the initial image */
+        }
+
+        #defuser.defused {
+            background-image: url('bomb defused.png'); /* Set the defused image */
+        }
+
+        #defuser.blown-up {
+            background-image: url('explosion.png'); /* Set the blown up image */
+        }
+    </style>
 </head>
 <body>
 
 <h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
-<button id="defuser">Defuse the BOM</button>
+<button id="defuser" class="bomb-button">Defuse the BOM</button>
 
 <script>
     (function() {
@@ -16,11 +38,14 @@
         var detonationTimer = 5;
         var timerInterval;
 
-        // TODO: This function needs to be called once every second
         function updateTimer() {
             if (detonationTimer === 0) {
+                // Update the button class to change its appearance when blown up
+                document.getElementById('defuser').className = 'bomb-button blown-up';
                 alert('EXTERMINATE!');
-                document.body.innerHTML = '';
+                // Clear only the timer and message, not the entire body
+                document.getElementById('timer').innerHTML = '';
+                document.getElementById('message').innerHTML = '';
             } else if (detonationTimer > 0) {
                 document.getElementById('timer').innerHTML = detonationTimer;
             }
@@ -28,20 +53,15 @@
             detonationTimer--;
         }
 
-        // TODO: When this function runs, it needs to
-        // cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
             clearInterval(timerInterval);
+            // Update the button class to change its appearance when defused
+            document.getElementById('defuser').className = 'bomb-button defused';
             alert('BOM defused!');
         }
 
         timerInterval = setInterval(updateTimer, 1000);
 
-        // Don't modify anything below this line!
-        //
-        // This causes the defuseTheBOM() function to be called
-        // when the "defuser" button is clicked.
-        // We will learn about events in the DOM lessons
         var defuser = document.getElementById('defuser');
         defuser.addEventListener('click', defuseTheBOM);
     })();
